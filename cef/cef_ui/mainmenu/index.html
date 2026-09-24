@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+	<head>
+		
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="css/all.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+
+	<body>
+		
+		<div class="background">
+			
+			<img src="img/background.png">
+			<div class="darken"></div>
+		</div>
+
+		<div class="message-outer">
+
+			<div class="message-inner">
+
+				<p></p>
+
+				<div class="progress-bar">
+
+					<div class="progress-fill"></div>
+				</div>
+
+				<button label="ok">Ok</button>
+			</div>
+		</div>
+
+		<div class="loader-wrapper">
+
+            <div class="loader"></div>
+
+			<h1 style="display: none;"></h1>
+        </div>
+
+		<header>
+
+			<img id="logo" src="img/logo.svg">
+
+			<nav>
+
+				<button page="home"><i class="fa-solid fa-house"></i></button>
+				<button page="serverslist"><i class="fa-solid fa-gamepad"></i></button>
+				<button page="settings"><i class="fa-solid fa-bars"></i></button>
+			</nav>
+
+			<button id="exitgame"><i class="fa-solid fa-xmark"></i></button>
+		</header>
+
+		<div page="home">
+
+			<div class="page-header">
+
+				<h1 label="home">Home</h1>
+
+				<footer>
+
+					<a title="YouTube" href="https://www.youtube.com/@K3rhos"><i class="fa-brands fa-youtube"></i></a>
+					<a title="Github" href="https://github.com/K3rhos"><i class="fa-brands fa-github"></i></a>
+					<a title="Discord" href="https://discord.gg/8b7NVWnthY"><i class="fa-brands fa-discord"></i></a>
+					<a title="Patreon" href="https://www.patreon.com/K3rhos"><i class="fa-brands fa-patreon"></i></a>
+				</footer>
+			</div>
+
+			<div class="page-body columns">
+				
+				<div class="content">
+
+					<label label="direct_connect" for="direct_connect_input">Direct Connect</label>
+					<input type="text" id="direct_connect_input" placeholder="IP:Port" value="127.0.0.1"/>
+
+					<button label="connect" id="direct_connect_button">Connect</button>
+				</div>
+
+				<div class="content">
+
+					<div class="table-header">
+
+						<h3>Patreon Members</h3>
+					</div>
+					
+					<div class="table-content">
+		
+						<table id="patreonmemberslist"><tbody></tbody></table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div page="serverslist" class="hidden">
+
+			<div class="page-header">
+
+				<h1 label="serverslist">Servers List</h1>
+
+				<div>
+
+					<button id="refresh"><i class="fa-solid fa-arrows-rotate"></i></button>			
+					<input type="text" id="search" placeholder="Search..."/>
+				</div>
+			</div>
+
+			<div class="page-body">
+
+				<div class="table-header">
+
+					<table>		  
+						<thead>
+							<tr>
+								<th label="servername">Server Name</th>
+								<th label="tags">Tags</th>
+								<th label="players">Players</th>
+								<th label="ping">Ping</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+
+				<div class="table-content">
+
+					<table id="serverslist"><tbody></tbody></table>
+				</div>
+			</div>
+		</div>
+
+		<div page="settings" class="hidden">
+
+			<div class="page-header">
+
+				<h1 label="settings">Settings</h1>
+			</div>
+
+			<div class="page-body">
+
+				<div class="setting">
+
+					<label label="playername" for="setplayername">Player Name</label>
+					<input id="setplayername" type="text" placeholder="Enter a player name..." maxlength="16"/>
+				</div>
+
+				<div class="setting">
+
+					<label label="language" for="setlanguage">Language</label>
+
+					<div>
+
+						<button id="setlanguage" class="dropdown-button">English</button>
+						<div id="setlanguage-dropdown" class="dropdown-content">
+
+							<a lang="en">English</a>
+							<a lang="fr">French</a>
+							<a lang="de">German</a>
+							<a lang="it">Italian</a>
+							<a lang="es">Spanish</a>
+							<a lang="br">Brazilian</a>
+							<a lang="ar">Arabic</a>
+							<a lang="tr">Turkish</a>
+							<a lang="fa">Persian</a>
+							<a lang="ru">Russian</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="setting">
+
+					<label label="autoloadplugins" for="toggleloadplugins">Auto Load Plugins</label>
+					<input id="toggleloadplugins" type="checkbox"/>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/loading.js"></script>
+		<script type="text/javascript" src="js/langs.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>
